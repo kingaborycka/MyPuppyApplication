@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">MyPuppy</string>
+    <string name="month">Grudzień</string>
+    <string name="day">ND. 13</string>
+    <string name="toilet">Toaleta</string>
+    <string name="food">Posiłki</string>
+    <string name="other">Inne</string>
+    <string name="cancel">Anuluj</string>
+    <string name="save">Zapisz</string>
+    <string name="piss">siku</string>
+    <string name="poop">kupa</string>
+    
+    <string-array name="spinnerOptions">
+        <item>Spacer</item>
+        <item>Ogród</item>
+    </string-array>
+</resources>

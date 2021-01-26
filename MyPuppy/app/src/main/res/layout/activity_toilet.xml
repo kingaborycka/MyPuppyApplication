@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ToiletActivity">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/Toolbar"
+        android:layout_width="0dp"
+        android:layout_height="76dp"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/Month_TV"
+        android:layout_width="106dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/month"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/Toolbar" />
+
+    <TextView
+        android:id="@+id/Day_TV"
+        android:layout_width="138dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="28dp"
+        android:text="@string/day"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/Toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Month_TV"
+        app:layout_constraintVertical_bias="1.0" />
+
+
+    <FrameLayout
+        android:id="@+id/frameLayout2"
+        android:layout_width="256dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/frameLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Toolbar"
+        app:layout_constraintVertical_bias="0.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/TimeFrom_TV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="36dp"
+                android:layout_marginTop="56dp"
+                android:text="Od"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spinner" />
+
+            <TextView
+                android:id="@+id/TimeTo_TV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="36dp"
+                android:layout_marginTop="68dp"
+                android:text="Do"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/TimeFrom_TV" />
+
+            <EditText
+                android:id="@+id/TimeFrom_editText"
+                android:layout_width="107dp"
+                android:layout_height="70dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="60dp"
+                android:ems="10"
+                android:inputType="time"
+                android:textSize="30sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.173"
+                app:layout_constraintStart_toEndOf="@+id/TimeFrom_TV"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="@tools:sample/date/hhmm" />
+
+            <EditText
+                android:id="@+id/TimeTo_editText"
+                android:layout_width="107dp"
+                android:layout_height="70dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="20dp"
+                android:autoText="false"
+                android:ems="10"
+                android:inputType="time"
+                android:textSize="30sp"
+                app:layout_constraintStart_toEndOf="@+id/TimeTo_TV"
+                app:layout_constraintTop_toBottomOf="@+id/TimeFrom_editText"
+                tools:text="@tools:sample/date/hhmm" />
+
+            <CheckBox
+                android:id="@+id/Piss_CHB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/piss"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.434"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Poop_CHB" />
+
+            <CheckBox
+                android:id="@+id/Poop_CHB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="@string/poop"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.448"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/TimeTo_editText" />
+
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="119dp"
+                android:layout_height="41dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="100dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.972"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="236dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout2">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/AddToilet_B"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#B7ACB438"
+                android:text="@string/save"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/Cancel_B"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#D2D81B60"
+                android:text="@string/cancel"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </FrameLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

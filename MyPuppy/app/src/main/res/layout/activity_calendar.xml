@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#B7EBE7DE"
+    tools:context=".CalendarActivity">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#4AACB438"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar2"
+        android:layout_width="413dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="56dp"
+        android:background="#B7ACB438"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/toolbar" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="0dp"
+        android:layout_height="72dp"
+        android:background="#B7ACB438"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/Toilet_B"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="77dp"
+                android:layout_height="72dp"
+                android:layout_marginStart="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_lapa"
+                android:scaleType="fitCenter"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/Calendar_B"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <Button
+                android:id="@+id/Food_B"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="73dp"
+                android:layout_height="69dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_kosc"
+                android:scaleType="fitCenter"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/Other_B"
+                app:layout_constraintStart_toEndOf="@+id/Toilet_B"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <Button
+                android:id="@+id/Calendar_B"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="66dp"
+                android:layout_height="58dp"
+                android:layout_marginStart="16dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_kalendarz"
+                android:scaleType="fitCenter"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/Other_B"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="43dp"
+                android:layout_height="46dp"
+                android:layout_marginEnd="36dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_menu"
+                android:scaleType="fitCenter"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.384" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+    <CalendarView
+        android:id="@+id/calendarView"
+        android:layout_width="320dp"
+        android:layout_height="295dp"
+        android:minDate="01/11/2020"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

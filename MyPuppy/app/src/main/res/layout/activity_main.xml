@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#B7EBE7DE"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/Toolbar"
+        android:layout_width="0dp"
+        android:layout_height="76dp"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <FrameLayout
+        android:id="@+id/Date_TV"
+        android:layout_width="135dp"
+        android:layout_height="70dp"
+        app:layout_constraintBottom_toBottomOf="@+id/Toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/Month_TV"
+                android:layout_width="74dp"
+                android:layout_height="22dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/month"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.491"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/Day_TV"
+                android:layout_width="wrap_content"
+                android:layout_height="34dp"
+                android:text="@string/day"
+                android:textAlignment="center"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.517"
+                app:layout_constraintStart_toStartOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </FrameLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/New_B"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="88dp"
+        android:clickable="true"
+        android:focusable="auto"
+        android:focusableInTouchMode="false"
+        app:backgroundTint="#D2D81B60"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:maxImageSize="30dp"
+        app:rippleColor="#F7F0F0"
+        app:srcCompat="@android:drawable/ic_menu_add" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="130dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/Toilet_TV"
+                android:layout_width="61dp"
+                android:layout_height="18dp"
+                android:layout_marginStart="16dp"
+                android:background="#4AACB438"
+                android:text="@string/toilet"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ScrollView
+                android:id="@+id/Toilet_SV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                app:layout_constraintEnd_toStartOf="@+id/Food_TV"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Toilet_TV">
+
+                <EditText
+                    android:id="@+id/Toilet_MT"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="0dp"
+                    android:editable="false"
+                    android:singleLine="false"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:layout_editor_absoluteX="2dp"
+                    tools:layout_editor_absoluteY="91dp" />
+            </ScrollView>
+
+            <TextView
+                android:id="@+id/Food_TV"
+                android:layout_width="61dp"
+                android:layout_height="18dp"
+                android:layout_marginStart="208dp"
+                android:background="#4AACB438"
+                android:text="@string/food"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ScrollView
+                android:id="@+id/Food_SV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/Toilet_SV"
+                app:layout_constraintTop_toBottomOf="@+id/Food_TV">
+
+                <EditText
+                    android:id="@+id/Food_MT"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="0dp"
+                    android:editable="false"
+                    android:singleLine="false"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:layout_editor_absoluteX="2dp"
+                    tools:layout_editor_absoluteY="91dp" />
+            </ScrollView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/Other_TV"
+        android:layout_width="61dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="28dp"
+        android:background="#4AACB438"
+        android:text="@string/other"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+    <ScrollView
+        android:id="@+id/Other_SV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Other_TV">
+
+        <EditText
+            android:id="@+id/Other_MT"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="0dp"
+            android:inputType="textLongMessage"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteX="2dp"
+            tools:layout_editor_absoluteY="91dp" />
+    </ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="0dp"
+        android:layout_height="72dp"
+        android:background="#B7ACB438"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/Toilet_B"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="77dp"
+                android:layout_height="72dp"
+                android:layout_marginStart="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_lapa"
+                android:scaleType="fitCenter"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/Calendar_B"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <Button
+                android:id="@+id/Food_B"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="73dp"
+                android:layout_height="69dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_kosc"
+                android:scaleType="fitCenter"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/Other_B"
+                app:layout_constraintStart_toEndOf="@+id/Toilet_B"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <Button
+                android:id="@+id/Calendar_B"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="66dp"
+                android:layout_height="58dp"
+                android:layout_marginStart="16dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_kalendarz"
+                android:scaleType="fitCenter"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/Other_B"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="43dp"
+                android:layout_height="46dp"
+                android:layout_marginEnd="36dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_menu"
+                android:scaleType="fitCenter"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.384" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

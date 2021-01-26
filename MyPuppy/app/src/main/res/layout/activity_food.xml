@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FoodActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/Toolbar"
+        android:layout_width="0dp"
+        android:layout_height="76dp"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/Month_TV"
+        android:layout_width="106dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/month"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/Toolbar" />
+
+    <TextView
+        android:id="@+id/Day_TV"
+        android:layout_width="138dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="28dp"
+        android:text="@string/day"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/Toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Month_TV"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <EditText
+        android:id="@+id/KindOfFood_editText"
+        android:layout_width="205dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="84dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Karma"
+        android:textAlignment="textStart"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Toolbar" />
+
+    <EditText
+        android:id="@+id/Quantity_editText"
+        android:layout_width="49dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:inputType="number"
+        android:text="20"
+        android:textAlignment="textStart"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/KindOfFood_editText" />
+
+    <TextView
+        android:id="@+id/Unit_TV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="g"
+        app:layout_constraintStart_toEndOf="@+id/Quantity_editText"
+        app:layout_constraintTop_toTopOf="@+id/Quantity_editText" />
+
+    <TextView
+        android:id="@+id/Time_TV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="92dp"
+        android:layout_marginTop="68dp"
+        android:text="Godz."
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Quantity_editText" />
+
+    <EditText
+        android:id="@+id/Time_editText"
+        android:layout_width="107dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="28dp"
+        android:ems="10"
+        android:inputType="time"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.042"
+        app:layout_constraintStart_toEndOf="@+id/Time_TV"
+        app:layout_constraintTop_toBottomOf="@+id/Quantity_editText"
+        tools:text="@tools:sample/date/hhmm" />
+
+    <FrameLayout
+        android:layout_width="236dp"
+        android:layout_height="155dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/AddFood_B"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#B7ACB438"
+                android:text="@string/save"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/Cancel_B"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#D2D81B60"
+                android:text="@string/cancel"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </FrameLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
